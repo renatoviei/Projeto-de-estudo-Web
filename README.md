@@ -1,2 +1,2 @@
-# Projeto-de-Aplicativo
-Mini-projeto da seleção AIBox
+# Projeto-de-estudo-Web
+Mini-projeto de estudo Web
