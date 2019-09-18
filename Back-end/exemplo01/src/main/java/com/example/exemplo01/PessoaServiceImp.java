@@ -23,7 +23,7 @@ public class PessoaServiceImp implements PessoaService {
 
 	@Override
 	public Pessoa add(Pessoa p) {
-		throw new UnsupportedOperationException("Não suporttado ainda");
+		return repositorio.save(p);
 	}
 
 	@Override

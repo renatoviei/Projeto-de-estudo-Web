@@ -13,6 +13,10 @@ export class ServiceService {
   Url='http://localhost:8080/exemplo01/pessoas';
 
   getPessoas(){
-    return this.http.get<Pessoa[]>(this.Url)
+    return this.http.get<Pessoa[]>(this.Url);
+  }
+
+  createPessoa(pessoa:Pessoa){
+    return this.http.post<Pessoa>(this.Url, pessoa);
   }
 }
