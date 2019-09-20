@@ -7,13 +7,13 @@
             <form action="">
                 <div class="form-group">
                     <label for="">Nome:</label>
-                    <input type="text" class="form-control">
+                    <input #nome type="text" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="">Apelido:</label>
-                    <input type="text" class="form-control">
+                    <label for="">Sobrenome:</label>
+                    <input #apelidos type="text" class="form-control">
                 </div>
-                <button (click)="Salvar()" class="btn btn-danger">Salvar</button>
+                <button (click)="prepararParaGuardar(nome.value, apelidos.value)" class="btn btn-danger">Salvar</button>
             </form>
         </div>
     </div>

@@ -15,11 +15,16 @@ export class AddComponent implements OnInit {
   ngOnInit() {
   }
 
-  Salvar(pessoa:Pessoa){
-    this.service.createPessoa(pessoa)
-    .subscribe(data=>{
-      alert("Salvo com sucesso!");
-      this.router.navigate(["listar"]);    
+  prepararParaGuardar(nome: String, apelidos: String){
+    var pessoa = new Pessoa(nome, apelidos);
+    this.salvar(pessoa);
+  }
+
+
+  salvar(pessoa: Pessoa ){
+    this.service.createPessoa(pessoa).subscribe( value => {
+      alert("Pessoa adicionada com sucesso!")
+      this.router.navigate(["listar"]);
     })
   }
 }

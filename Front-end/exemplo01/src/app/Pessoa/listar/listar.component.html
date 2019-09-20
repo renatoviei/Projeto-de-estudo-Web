@@ -9,7 +9,7 @@
                     <tr>
                         <th>ID</th>
                         <th>NOMES</th>
-                        <th>APELIDOS</th>
+                        <th>SOBRENOMES</th>
                         <th>AÇÕES</th>
                     </tr>
                 </thead>
@@ -19,8 +19,8 @@
                         <td>{{pessoa.nome}}</td>
                         <td>{{pessoa.apelidos}}</td>
                         <td>
-                            <button class="btn btn-warning">Editar</button>
-                            <button class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                            <button (click)="editar(pessoa)" class="btn btn-warning">Editar</button>
+                            <button (click)="delete(pessoa)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
                         </td>
                     </tr>
                 </tbody>

@@ -20,4 +20,17 @@ export class ListarComponent implements OnInit {
     })
   }
 
+  editar(pessoa: Pessoa):void{
+    localStorage.setItem("id", pessoa.id.toString());
+    this.router.navigate(['edit']);
+  }
+
+  delete(pessoa: Pessoa){
+    this.service.deletePessoa(pessoa)
+    .subscribe(data=>{
+      this.pessoas = this.pessoas.filter(p=>p!==pessoa);
+      alert("Usuário deletado!");
+    })
+  }
+
 }

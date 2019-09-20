@@ -18,7 +18,7 @@ public class PessoaServiceImp implements PessoaService {
 
 	@Override
 	public Pessoa listarId(int id) {
-		throw new UnsupportedOperationException("Não suporttado ainda");
+		return repositorio.findById(id);
 	}
 
 	@Override
@@ -28,12 +28,16 @@ public class PessoaServiceImp implements PessoaService {
 
 	@Override
 	public Pessoa edit(Pessoa p) {
-		throw new UnsupportedOperationException("Não suporttado ainda");
+		return repositorio.save(p);
 	}
 
 	@Override
 	public Pessoa delete(int id) {
-		throw new UnsupportedOperationException("Não suporttado ainda");
+		Pessoa p = repositorio.findById(id);
+		if(p != null) {
+		repositorio.delete(p);
+		}
+		return p;
 	}
 
 }
